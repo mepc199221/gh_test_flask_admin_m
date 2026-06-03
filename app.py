@@ -9,7 +9,7 @@ CORS(app)
 def health():
     return jsonify({"status": "ok"})
 
-@app.route("/use", methods=["GET"])
+@app.route("/users", methods=["GET"])
 def get_users():
     response = requests.get("https://jsonplaceholder.typicode.com/users")
     return jsonify(response.json())
